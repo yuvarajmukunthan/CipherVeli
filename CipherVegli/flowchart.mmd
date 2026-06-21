@@ -1,0 +1,11 @@
+flowchart TD
+    A[Teacher logs in] --> B[Dashboard]
+    B --> C[Select Subject & Enter Student Marks]
+    C --> D[System evaluates performance]
+    D --> E{Marks >= Pass Threshold?}
+    E -->|Yes| F[Save Record & Update Dashboard]
+    E -->|No| G[Save Record & Trigger Email Alert]
+    G --> H[Send Email Notification to Parent/Guardian]
+    H --> I[Log Notification Event]
+    F --> J[Process Completed]
+    I --> J

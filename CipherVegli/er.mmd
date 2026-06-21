@@ -1,0 +1,37 @@
+erDiagram
+    TEACHER ||--o{ SUBJECT : teaches
+    TEACHER ||--o{ MARK_RECORD : enters
+    STUDENT ||--o{ MARK_RECORD : receives
+    STUDENT ||--|| PARENT : has
+    SUBJECT ||--o{ MARK_RECORD : associated_with
+    
+    TEACHER {
+        int id
+        string name
+        string email
+        string department
+    }
+    STUDENT {
+        int id
+        string name
+        string roll_number
+        string grade
+    }
+    PARENT {
+        int id
+        string name
+        string email
+        string phone
+    }
+    SUBJECT {
+        int id
+        string name
+        int pass_mark
+        int max_mark
+    }
+    MARK_RECORD {
+        int id
+        int marks_obtained
+        date assessment_date
+        string status
+    }
